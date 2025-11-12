@@ -34,8 +34,8 @@ for c in meta['num_cols']:
 for c in meta['cat_cols']:
     options = df[c].dropna().astype(str).unique().tolist() if c in df.columns else []
     default_opt = options[0] if len(options) > 0 else ''
-    inputs[c] = st.selectbox(c, options=options, index=0 if len(options) > 0 else None)
-
+    if options:
+        inputs[c] = st.selectbox(c, options=options, index=0)
 if st.button('Predict satisfaction probability'):
     X_in = pd.DataFrame([inputs])
     proba = model.predict_proba(X_in)[:,1][0]
