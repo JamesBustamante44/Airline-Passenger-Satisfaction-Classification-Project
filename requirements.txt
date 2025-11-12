@@ -1,0 +1,18 @@
+# Core libraries
+numpy
+pandas
+
+# Visualization
+matplotlib
+seaborn
+
+# Machine Learning
+scikit-learn
+xgboost
+joblib
+
+# Web App
+streamlit
+
+# Optional: if you use Jupyter notebooks locally
+jupyter
