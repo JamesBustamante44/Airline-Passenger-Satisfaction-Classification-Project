@@ -12,8 +12,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
-DATA_URL = 'https://raw.githubusercontent.com/JamesBustamante44/Airline-Passenger-Satisfaction-Classification-Project/main/airline_passenger_satisfaction%20(1).csv'
-
+DATA_URL = "https://raw.githubusercontent.com/JamesBustamante44/Airline-Passenger-Satisfaction-Classification-Project/main/cleaned_airline_passenger_satisfaction.csv"
 
 @st.cache_data
 def load_data():
