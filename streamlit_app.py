@@ -13,6 +13,7 @@ from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 DATA_URL = "https://raw.githubusercontent.com/JamesBustamante44/Airline-Passenger-Satisfaction-Classification-Project/main/cleaned_airline_passenger_satisfaction.csv"
+RANDOM_STATE = 42
 
 @st.cache_data
 def load_data():
