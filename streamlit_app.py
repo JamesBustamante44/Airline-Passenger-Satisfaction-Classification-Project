@@ -171,8 +171,8 @@ with tab_predict:
                         default = int(df[feat].mean())
                         step = 1
                         fmt = '%d'
-                    data[feat] = st.number_input(feat, value=default, min_value=vmin, max_value=vmax, step=step, format=fmt)                else:
-                    options = df[feat].dropna().unique().tolist()
+                    data[feat] = st.number_input(feat, value=default, min_value=vmin, max_value=vmax, step=step, format=fmt)                
+                                        options = df[feat].dropna().unique().tolist()
                     if not options:
                         options = ['']
                     data[feat] = st.selectbox(feat, options)
