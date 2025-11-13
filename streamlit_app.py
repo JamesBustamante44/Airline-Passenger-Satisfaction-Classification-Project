@@ -162,7 +162,7 @@ with tab_predict:
                     vmin, vmax = float(df[feat].min()), float(df[feat].max())
                     default = float(df[feat].mean())
                     step = 1.0 if pd.api.types.is_float_dtype(df[feat]) else 1
-                    data[feat] = st.number_input(feat, value=default, min_value=vmin, max_value=vmax, step=step, format='%f' if step==1.0 else '%d')
+                    data[feat] = st.number_input(feat, value=default, min_value=vmin, max_value=vmax, step=step, format='%d' if step==1.0 else '%f')
                 else:
                     options = df[feat].dropna().unique().tolist()
                     if not options:
