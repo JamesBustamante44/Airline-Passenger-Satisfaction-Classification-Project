@@ -174,9 +174,9 @@ with tab_predict:
                     data[feat] = st.number_input(feat, value=default, min_value=vmin, max_value=vmax, step=step, format=fmt)                
             else:
                 options = df[feat].dropna().unique().tolist()
-                                if not options:
-                                    options = ['']
-                    data[feat] = st.selectbox(feat, options)
+                if not options:
+                    options = ['']
+                data[feat] = st.selectbox(feat, options)
         submitted = st.form_submit_button('Predict')
 
     if submitted:
