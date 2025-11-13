@@ -62,7 +62,7 @@ def train_models(data):
     models = {
         'Logistic Regression': LogisticRegression(solver='liblinear', random_state=RANDOM_STATE),
         'Random Forest Classifier': RandomForestClassifier(random_state=RANDOM_STATE, n_jobs=-1),
-        'Support Vector Machine (SVC)': SVC(random_state=RANDOM_STATE, probability=True)
+        # 'Support Vector Machine (SVC)': SVC(random_state=RANDOM_STATE, probability=True)
     }
 
     trained = {}
